@@ -14,7 +14,8 @@
         - Richiedo all'utente il suo nome
         - Richiedo all'utente il suo cognome
         - Richiedo all'utente il suo colore preferito
-        - Concateno le stringhe aggiungendo '23' alla fine
+        - Genero un numero randomico aggiungendogli 23
+        - Concateno le stringhe e il numero ottenuto
         - Scrivo in console la password generata
         - Scrivo in pagina la password generata
 */
@@ -22,9 +23,10 @@
 const userName = prompt("Inserisci il tuo nome: ");
 const userSurname = prompt("Inserisci il tuo cognome: ");
 const userFavoriteColor = prompt("Inserisci il tuo colore preferito: ");
+const myRandomNumber = Math.floor(Math.random() * 1000) + 23;
 const passwordElement = document.getElementById('password');
 
-const password = `${userName}${userSurname}${userFavoriteColor}23`
+const password = `${userName}${userSurname}${userFavoriteColor}${myRandomNumber}`;
 
 console.log(password);
 passwordElement.innerHTML = `La tua nuova password è: <strong>${password}</strong>`;
